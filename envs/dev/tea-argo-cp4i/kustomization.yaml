@@ -1,0 +1,16 @@
+resources:
+  - ../../../base
+images:
+  - name: IR_IMAGE_PLACEHOLDER
+    newName: image-registry.openshift-image-registry.svc.cluster.local:5000/cp4i/tea-tekton-cp4i
+    newTag: 20250808143641-4c89668
+patches:
+  - target:
+      group: appconnect.ibm.com
+      version: v1beta1
+      kind: IntegrationRuntime
+      name: APP_NAME
+    patch: |
+      - op: replace
+        path: /metadata/name
+        value: tea-argo-cp4i
