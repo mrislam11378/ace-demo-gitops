@@ -1,0 +1,4 @@
+resources:       # ensure secrets get created before configurations NOTE: Having secrets in git is an ABSOLUTELY HORRENDOUS idea. 
+- teajdbc-policy.yaml
+- default-policy.yaml
+- teajdbc.yaml

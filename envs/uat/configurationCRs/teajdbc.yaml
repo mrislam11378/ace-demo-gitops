@@ -1,0 +1,8 @@
+apiVersion: appconnect.ibm.com/v1beta1
+kind: Configuration
+metadata:
+  name: teajdbc
+spec:
+  description: Development DB2 user
+  secretName: teajdbc-69j28
+  type: setdbparms
