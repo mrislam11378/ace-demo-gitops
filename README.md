@@ -44,10 +44,7 @@ This repository manages **IBM App Connect Integration Runtimes** using **Kustomi
   - `tea-argo-cp4i/` — Main Kustomize overlay for the environment.  
   - `configurationCRs/` — Additional configuration Custom Resources for the environment, such as policies and JDBC configuration.
 
-## Flow Diagram
-
-```mermaid
-flowchart TD
-    A[Base Config <br/> ./base] --> B[Environment Overlay <br/> ./envs/dev or ./envs/uat]
-    B --> C[ArgoCD Application <br/> watches overlay path]
-    C --> D[Cluster Namespace <br/> Integration Runtime Deployed]
+```bash
+oc -n cp4i policy add-role-to-user   system:image-puller   system:serviceaccount:dev:default
+oc -n cp4i policy add-role-to-user   system:image-puller   system:serviceaccount:uat:default
+```
