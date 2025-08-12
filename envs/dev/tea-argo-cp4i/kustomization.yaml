@@ -3,7 +3,7 @@ resources:
 images:
   - name: IR_IMAGE_PLACEHOLDER
     newName: image-registry.openshift-image-registry.svc.cluster.local:5000/cp4i/tea-tekton-cp4i
-    newTag: 20250812154804-75f5430
+    newTag: 20250812161559-b744fbc
 patches:
   - target:
       group: appconnect.ibm.com
