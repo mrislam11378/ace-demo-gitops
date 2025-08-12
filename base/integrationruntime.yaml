@@ -14,7 +14,6 @@ spec:
     use: AppConnectEnterpriseNonProductionFREE
   template:
     spec:
-      serviceAccountName: tea-argo-cp4i-ir
       containers:
         - image: >-
             IR_IMAGE_PLACEHOLDER
